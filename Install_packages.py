@@ -5,14 +5,18 @@ packages = [
     "ultralytics",
     "roboflow",
     "numpy",
-    "PIL",
     "torch",
     "torchvision",
     "matplotlib",
-    "skimage",
+    "scikit-image",
     "torch",
     "sklearn",
-    "scipy"
+    "scipy",
+    "opencv-python",
+    "pillow",
+    "pyyaml",
+    "tqdm",
+    "requests"
 ]
 
 
