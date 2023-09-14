@@ -16,7 +16,10 @@ packages = [
     "pillow",
     "pyyaml",
     "tqdm",
-    "requests"
+    "requests",
+    "opencv-python-headless",
+    "gitpython",
+    "setuptools"
 ]
 
 
