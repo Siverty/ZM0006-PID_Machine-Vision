@@ -19,7 +19,8 @@ packages = [
     "requests",
     "opencv-python-headless",
     "gitpython",
-    "setuptools"
+    "setuptools",
+    "IPython",
 ]
 
 
