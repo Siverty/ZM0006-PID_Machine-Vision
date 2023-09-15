@@ -1,6 +1,0 @@
-names:
-- LMI
-- TAG
-nc: 2
-train: p&id-symbol-4/train/images
-val: p&id-symbol-4/valid/images
