@@ -2,6 +2,7 @@ import subprocess
 
 # List of packages to check and install
 packages = [
+    "tabulate",
     "ultralytics",
     "roboflow",
     "numpy",
