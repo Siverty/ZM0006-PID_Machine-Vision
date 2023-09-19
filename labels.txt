@@ -1,0 +1,180 @@
+Solenoid Valve
+Control Valve
+Pneumatic
+Mid-Arrow
+Gate Valve
+Powered Valve
+Axial Compressor
+Centrifugal Compressor
+Reciprocation Compressor
+Rotary Compressor
+Positive Displacement
+Overhead Conveyor
+Scraper Conveyor
+Screw Conveyor
+Conveyor
+Elevator
+Hoist
+Skip Hoist
+Motor
+Diesel Motor
+Electric Motor
+Liquid Ring Vacuum
+Turbine Driver
+Double Flow Turbine
+Agitator / Mixer
+Drum
+Tank
+Centrifugal Blower
+Alkilation
+Boom Loader
+Fluid Catalytic Cracking
+Fluid Cooking
+Fluidized Reactor
+Tubular
+Reformer
+Mixing Reactor
+Hydrodesulfurization
+Plate tower
+Hydro Cracking
+Packed Tower
+Chimney Tower
+Furnace
+Counterflow Forced Draft
+Counterflow Natural Draft
+CrossFlow Inducted
+Oil Burner
+Automatic Stoker
+Boiler
+Reboiler
+Condenser
+Evaporative Condenser
+Cooling Tower
+Heat Exchanger
+Air Cooled Exchanger
+Hairpin Exchanger
+Plate and Frame Heat Exchanger
+Spiral Heat Exchanger
+U-Tube Heat Exchanger
+Double Pipe Heat
+Shell and Tube Heat
+Single Pass Heat
+Heater
+Indicator 1
+Indicator 2
+Indicator 3
+Indicator 4 
+Indicator 
+Shared Indicator
+Shared Indicator 2
+Computer Indicator
+Programmable Indicator
+Temp Indicator
+Temp Transmitter
+Temp Recorder
+Temp Controller
+Flow Indicator
+Flow Transmitter
+Flow Recorder
+Flow Controller
+Level Indicator
+Level Transmitter
+Level Recorder
+Level Controller
+Pressure Transmitter
+Pressure Recorder
+Pressure Controller
+Pressure Indicating
+Pressure Recording
+Level Alarm
+Flow Element
+Temperature Element
+Level Gauge
+Analyzer Transmitter
+Transducer
+One to Many
+Multi-Lines
+Butt Weld
+Top to Top
+Sonic Signal
+Nuclear
+Hydraulic Signal Line
+Mechanical Link
+Soldered/Solvent
+Double Containment
+Flange
+Flange 2
+End Cap
+End Cap 2
+Breather
+Electronically Insulated
+Reducer
+Incline Mixer
+Seperator
+Drain Silencer
+Triangle Seperator
+Triangle Seperator 2
+Tundish
+Open Vent
+Pulsation Dampener
+Duplex Strainer
+Basket Strainer
+Vent Silencer
+Inline Silencer
+Steam Trap
+Desuperheater
+Ejector/Eductor
+Exhaust Head
+Rotary Valve
+Expansion Joint
+Ejector/Injector
+Compressor/Turbine
+Motor Driven Turbine
+Triple Fan Blades
+Fan Blades
+Centrifugal Pump
+Gear Pump
+Horizontal Pump
+Progressive Cavity Pump
+crew Pump
+Sump Pump
+Vacuum Pump
+Vertical Pump
+Globe Valve
+Back Pressure
+Needle Valve
+Butterfly Valve
+Ball Valve
+Diaghragm
+Plug Valve
+Check Valve
+Check Valve 2
+Angle Valve
+Hydraulic Valve
+Motor-Operated Valve
+Float-Operated Valve
+3-Way Plug Valve
+4-Way Valve
+Gauge
+Bleeder Valve
+Orifice
+Rotameter
+Vessel
+Open Tank
+Open Top Tank
+Closed Tank
+Storage Sphere
+Column
+Tank 2
+Tray Column
+Gas Holder
+Clarifier
+Gas Cylinder
+Bag
+Reaction Vessel
+Bin
+Dome Roof Tank
+Cone Roof Tank
+Internal Floating Roof
+Double Wall Tank
+Onion Tank
