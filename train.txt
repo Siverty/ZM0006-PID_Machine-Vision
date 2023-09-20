@@ -1,0 +1,8 @@
+task=detect
+mode=train
+model={model}
+data={data_config}
+epochs=1
+batch=5
+nbs=100
+plots=True
