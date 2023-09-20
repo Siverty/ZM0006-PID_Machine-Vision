@@ -1,7 +1,0 @@
-task=detect
-mode=train
-model=runs/detect/train/weights/best.pt
-data={data_config}
-conf=0.11
-source=datasets/datasets/Labels_PID/images/test/*.png
-plots=True

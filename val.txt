@@ -1,5 +1,0 @@
-task=detect
-mode=val
-model=runs/detect/train/weights/best.pt
-data={data_config}
-plots=True
