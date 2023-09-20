@@ -119,7 +119,7 @@ names: [
   Breather,
   Electronically Insulated,
   Reducer,
-  Incline Mixer,
+  Inline Mixer,
   Separator,
   Drain Silencer,
   Triangle Separator,
@@ -192,7 +192,11 @@ names: [
   Removable Spool,
   Y Type Strainer,
   Siphon Drain,
-  Diverter Valve
+  Diverter Valve,
+  Detonation Arrester,
+  Bursting Disc,
+  Flame Arrester,
+  Flame Arrester 2
 ]
 
 
