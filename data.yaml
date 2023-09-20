@@ -1,7 +1,12 @@
 # path: /Labels_PID  # dataset root dir
-train: datasets\Labels_PID\images\train  # train images (relative to 'path') 128 images
+
+# Train/val/test sets old
+# train: datasets\Labels_PID\images\train  # train images (relative to 'path') 128 images
 val: datasets\Labels_PID\images\val  # val images (relative to 'path') 128 images
 test:  datasets\Labels_PID\images\test # test images (optional)
+
+# Train/val/test sets new
+train: newmaplol\images\train  # train images (relative to 'path') 128 images
 
 # Number of classes
 nc: 189  # number of classes
