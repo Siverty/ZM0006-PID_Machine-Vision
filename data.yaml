@@ -9,7 +9,7 @@ test:  Labels_PID\images\test # test images (optional)
 train: newmaplol\images\train  # train images (relative to 'path') 128 images
 
 # Number of classes
-nc: 208  # number of classes
+nc: 209  # number of classes
 
 # Classes
 names: [
