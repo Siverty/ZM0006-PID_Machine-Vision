@@ -9,7 +9,7 @@ test:  Labels_PID\images\test # test images (optional)
 train: newmaplol\images\train  # train images (relative to 'path') 128 images
 
 # Number of classes
-nc: 189  # number of classes
+nc: 208  # number of classes
 
 # Classes
 names: [
@@ -201,7 +201,26 @@ names: [
   Detonation Arrester,
   Bursting Disc,
   Flame Arrester,
-  Flame Arrester 2
+  Flame Arrester 2,
+  Loadcell,
+  Docking Station,
+  Metal Check,
+  Changeover Valve,
+  Dust Filter,
+  Rotary Sieve,
+  Air Dryer,
+  Drain,
+  Vacuum Filter,
+  Buffer Belt Conveyor,
+  Belt Conveyor with Metalcheck,
+  Big-Bag Filling Machine,
+  Belt Conveyor,
+  Bag Filling Station,
+  Mill,
+  Heater,
+  Filter,
+  Cooling Screw Conveyor,
+  Dust Extractor
 ]
 
 
