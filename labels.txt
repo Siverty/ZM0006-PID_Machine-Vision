@@ -26,7 +26,7 @@ Agitator / Mixer
 Drum
 Tank
 Centrifugal Blower
-Alkilation
+Alkylation
 Boom Loader
 Fluid Catalytic Cracking
 Fluid Cooking
@@ -42,7 +42,7 @@ Chimney Tower
 Furnace
 Counterflow Forced Draft
 Counterflow Natural Draft
-CrossFlow Inducted
+Crossflow Inducted
 Oil Burner
 Automatic Stoker
 Boiler
@@ -63,8 +63,8 @@ Heater
 Indicator 1
 Indicator 2
 Indicator 3
-Indicator 4 
-Indicator 
+Indicator 4
+Indicator
 Shared Indicator
 Shared Indicator 2
 Computer Indicator
@@ -109,11 +109,11 @@ End Cap 2
 Breather
 Electronically Insulated
 Reducer
-Incline Mixer
-Seperator
+Inline Mixer
+Separator
 Drain Silencer
-Triangle Seperator
-Triangle Seperator 2
+Triangle Separator
+Triangle Separator 2
 Tundish
 Open Vent
 Pulsation Dampener
@@ -136,7 +136,7 @@ Centrifugal Pump
 Gear Pump
 Horizontal Pump
 Progressive Cavity Pump
-crew Pump
+Screw Pump
 Sump Pump
 Vacuum Pump
 Vertical Pump
@@ -145,7 +145,7 @@ Back Pressure
 Needle Valve
 Butterfly Valve
 Ball Valve
-Diaghragm
+Diaphragm
 Plug Valve
 Check Valve
 Check Valve 2
@@ -178,3 +178,31 @@ Cone Roof Tank
 Internal Floating Roof
 Double Wall Tank
 Onion Tank
+Indicator 5
+Removable Spool
+Y Type Strainer
+Siphon Drain
+Diverter Valve
+Detonation Arrester
+Bursting Disc
+Flame Arrester
+Flame Arrester 2
+Loadcell
+Docking Station
+Metal Check
+Changeover Valve
+Dust Filter
+Rotary Sieve
+Air Dryer
+Drain
+Vacuum Filter
+Buffer Belt Conveyor
+Belt Conveyor with Metalcheck
+Big-Bag Filling Machine
+Belt Conveyor
+Bag Filling Station
+Mill
+Heater
+Filter
+Cooling Screw Conveyor
+Dust Extractor
