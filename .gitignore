@@ -168,7 +168,11 @@ dvc.yaml
 
 # Yolo
 /runs/
+yolov8n.pt
+yolov8s.pt
 yolov8m.pt
+yolov8l.pt
+yolov8x.pt
 
 val.cache
 train.cache
