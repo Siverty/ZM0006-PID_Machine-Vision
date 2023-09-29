@@ -167,7 +167,7 @@ dvc.yaml
 
 
 # Yolo
-#/runs/
+/runs/
 yolov8n.pt
 yolov8s.pt
 yolov8m.pt
