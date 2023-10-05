@@ -1,11 +1,11 @@
 import yaml
 
 # Load the original data.yaml file
-with open('original_data.yaml', 'r') as file:
+with open('data-old.yaml', 'r') as file:
     original_data = yaml.safe_load(file)
 
 # Load the updated data.yaml file
-with open('updated_data.yaml', 'r') as file:
+with open('data.yaml', 'r') as file:
     updated_data = yaml.safe_load(file)
 
 # Create a mapping from class names to their corresponding indices in the original data.yaml
