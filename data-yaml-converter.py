@@ -402,7 +402,7 @@ list2 = [
   ]
 
 # Convert List 2 to lowercase and merge them
-merged_list = list1 + [item.lower() for item in list2]
+merged_list = list2 + [item.lower() for item in list1]
 
 # Find duplicate items
 duplicates = {}
