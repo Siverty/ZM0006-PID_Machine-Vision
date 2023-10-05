@@ -1,4 +1,5 @@
 import yaml
+import os
 
 # Load the original data.yaml file
 with open('data-old.yaml', 'r') as file:
