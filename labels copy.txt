@@ -1,0 +1,19 @@
+Compressor
+Conveyor
+Motor
+Mixer
+Tank
+Centrifugal Pump
+Reactor
+Boiler
+Condenser
+Cooling Tower
+Heat Exchanger
+Indicator
+Fan
+Turbine
+Pump
+Valve
+Gauge
+Orifice
+Rotameter
