@@ -13,16 +13,22 @@ if not os.path.exists(save_folder):
 
 # Loop through each image in the folder
 for filename in os.listdir(train_folder):
-    # Check if the file name starts with "eroded_"
+    # Check if the file name starts with "blur_" or "blur_"
     if filename.startswith("eroded_"):
-        print(f"{filename} already eroded, skipping...")
+        os.remove(os.path.join(train_folder, filename))
+        os.remove(os.path.join(label_folder, os.path.splitext(filename)[0] + ".txt"))
+        print(f"{filename} deleted...")
+        continue
+
+    elif filename.startswith("blur_"):
+        print(f"{filename} already blurred, skipping...")
         continue
 
     # Load the image
     img = cv2.imread(os.path.join(train_folder, filename))
 
     # Define the kernel for erosion
-    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5,5))
+    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5,5)) # 5x5 kernel
 
     # Erode the image
     eroded = cv2.erode(img, kernel, iterations=1)
