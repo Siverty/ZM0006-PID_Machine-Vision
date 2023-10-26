@@ -27,7 +27,7 @@ def erode_images(train_folder, label_folder):
         img = cv2.imread(os.path.join(train_folder, filename))
 
         # Define the kernel for erosion
-        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5,5)) # 5x5 kernel
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3,3)) # 5x5 kernel
 
         # Erode the image
         eroded = cv2.erode(img, kernel, iterations=1)
