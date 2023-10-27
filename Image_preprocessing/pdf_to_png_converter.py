@@ -1,32 +1,31 @@
 import os
-import subprocess
-import shutil
+import fitz  # PyMuPDF
+from PIL import Image
 
-check_for_pdf_in_folder = "test/Original_PID"
-copy_folder = "test/Original_PID_PDF"
+# Specify the input and output folders
+input_folder = 'test\Converted_PID_JPEG'
+output_folder = 'test\Original_PID'
 
-def pdf_to_png_converter(check_for_pdf_in_folder, copy_folder):
+# Create the output folder if it doesn't exist
+os.makedirs(output_folder, exist_ok=True)
 
-    pdf_files = [f for f in os.listdir(check_for_pdf_in_folder) if f.endswith('.pdf')]
-    for pdf_file in pdf_files:
-        shutil.move(os.path.join(check_for_pdf_in_folder, pdf_file), copy_folder)
+# Iterate through the PDF files in the input folder
+for filename in os.listdir(input_folder):
+    if filename.endswith('.pdf'):
+        pdf_file = os.path.join(input_folder, filename)
 
-    pdf_files = [f for f in os.listdir(check_for_pdf_in_folder) if f.endswith('.pdf')]
+        # Open the PDF file using PyMuPDF
+        pdf_document = fitz.open(pdf_file)
 
-    for pdf_file in pdf_files:
-        # Use Ghostscript to convert the PDF to PNG
-        output_folder = os.path.join(check_for_pdf_in_folder, pdf_file[:-4])
-        os.makedirs(output_folder, exist_ok=True)
-        cmd = [
-            "gs",
-            "-dSAFER",
-            "-dBATCH",
-            "-dNOPAUSE",
-            "-sDEVICE=png16m",
-            "-r300",  # Set the resolution (adjust as needed)
-            f"-sOutputFile={output_folder}/%03d.png",  # Output file format
-            os.path.join(check_for_pdf_in_folder, pdf_file)
-        ]
-        subprocess.run(cmd)
+        # Iterate through the pages and save each page as a PNG
+        for page_num in range(pdf_document.page_count):
+            page = pdf_document.load_page(page_num)
+            image = page.get_pixmap()
+            png_file = os.path.splitext(filename)[0] + f'_page{page_num + 1}.png'
+            png_path = os.path.join(output_folder, png_file)
+            image.save(png_path)
 
-pdf_to_png_converter(check_for_pdf_in_folder, copy_folder)
+        # Close the PDF file
+        pdf_document.close()
+
+print("Conversion complete.")
