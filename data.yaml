@@ -1,18 +1,16 @@
 # path: /Labels_PID  # dataset root dir
 
 # Train/val/test sets old
-# train: datasets\Labels_PID\images\train  # train images (relative to 'path') 128 images
-val: Labels_PID\images\val # val images (relative to 'path') 128 images
-test: Labels_PID\images\test # test images (optional)
+val: Labels_PID/images/val # val images (relative to 'path')
+test: Labels_PID/images/test # test images (optional, can be defined in the mv.ipynb in a separate cell)
 
 # Train/val/test sets new
-train: Labels_PID\images\train # train images (relative to 'path') 128 images
+train: Labels_PID/images/train # train images (relative to 'path')
 
 # Number of classes
-# nc: 208  # number of classes
-nc: 19
+nc: 19 # number of classes
 
-# # Classes
+# Classes
 names: [
     "Compressor",
     "Conveyor",
@@ -34,6 +32,9 @@ names: [
     "Orifice",
     "Rotameter"
 ]
+
+
+# These were abanoned in favor of the above, but are kept here for reference/future work
 
 # names: ["solenoid valve",
 #     "control valve",
