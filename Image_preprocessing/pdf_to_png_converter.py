@@ -5,11 +5,12 @@ import shutil
 check_for_pdf_in_folder = "test/Original_PID"
 copy_folder = "test/Original_PID_PDF"
 
-pdf_files = [f for f in os.listdir(check_for_pdf_in_folder) if f.endswith('.pdf')]
-for pdf_file in pdf_files:
-    shutil.move(os.path.join(check_for_pdf_in_folder, pdf_file), copy_folder)
-
 def pdf_to_png_converter(check_for_pdf_in_folder, copy_folder):
+
+    pdf_files = [f for f in os.listdir(check_for_pdf_in_folder) if f.endswith('.pdf')]
+    for pdf_file in pdf_files:
+        shutil.move(os.path.join(check_for_pdf_in_folder, pdf_file), copy_folder)
+
     pdf_files = [f for f in os.listdir(check_for_pdf_in_folder) if f.endswith('.pdf')]
 
     for pdf_file in pdf_files:
