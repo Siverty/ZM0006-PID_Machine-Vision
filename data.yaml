@@ -1,408 +1,329 @@
 # path: /Labels_PID  # dataset root dir
 
 # Train/val/test sets old
-# train: datasets\Labels_PID\images\train  # train images (relative to 'path') 128 images
-val: Labels_PID\images\val  # val images (relative to 'path') 128 images
-test:  Labels_PID\images\test # test images (optional)
+val: Labels_PID/images/val # val images (relative to 'path')
+test: Labels_PID/images/test # test images (optional, can be defined in the mv.ipynb in a separate cell)
 
 # Train/val/test sets new
-train: newmaplol\images\train  # train images (relative to 'path') 128 images
+train: Labels_PID/images/train # train images (relative to 'path')
 
 # Number of classes
-nc: 209  # number of classes
+nc: 19 # number of classes
 
 # Classes
 names: [
-  Solenoid Valve,
-  Control Valve,
-  Pneumatic,
-  Mid-Arrow,
-  Gate Valve,
-  Powered Valve,
-  Axial Compressor,
-  Centrifugal Compressor,
-  Reciprocation Compressor,
-  Rotary Compressor,
-  Positive Displacement,
-  Overhead Conveyor,
-  Scraper Conveyor,
-  Screw Conveyor,
-  Conveyor,
-  Elevator,
-  Hoist,
-  Skip Hoist,
-  Motor,
-  Diesel Motor,
-  Electric Motor,
-  Liquid Ring Vacuum,
-  Turbine Driver,
-  Double Flow Turbine,
-  Agitator / Mixer,
-  Drum,
-  Tank,
-  Centrifugal Blower,
-  Alkylation,
-  Boom Loader,
-  Fluid Catalytic Cracking,
-  Fluid Cooking,
-  Fluidized Reactor,
-  Tubular,
-  Reformer,
-  Mixing Reactor,
-  Hydrodesulfurization,
-  Plate tower,
-  Hydro Cracking,
-  Packed Tower,
-  Chimney Tower,
-  Furnace,
-  Counterflow Forced Draft,
-  Counterflow Natural Draft,
-  Crossflow Inducted,
-  Oil Burner,
-  Automatic Stoker,
-  Boiler,
-  Reboiler,
-  Condenser,
-  Evaporative Condenser,
-  Cooling Tower,
-  Heat Exchanger,
-  Air Cooled Exchanger,
-  Hairpin Exchanger,
-  Plate and Frame Heat Exchanger,
-  Spiral Heat Exchanger,
-  U-Tube Heat Exchanger,
-  Double Pipe Heat,
-  Shell and Tube Heat,
-  Single Pass Heat,
-  Heater,
-  Indicator 1,
-  Indicator 2,
-  Indicator 3,
-  Indicator 4,
-  Indicator,
-  Shared Indicator,
-  Shared Indicator 2,
-  Computer Indicator,
-  Programmable Indicator,
-  Temp Indicator,
-  Temp Transmitter,
-  Temp Recorder,
-  Temp Controller,
-  Flow Indicator,
-  Flow Transmitter,
-  Flow Recorder,
-  Flow Controller,
-  Level Indicator,
-  Level Transmitter,
-  Level Recorder,
-  Level Controller,
-  Pressure Transmitter,
-  Pressure Recorder,
-  Pressure Controller,
-  Pressure Indicating,
-  Pressure Recording,
-  Level Alarm,
-  Flow Element,
-  Temperature Element,
-  Level Gauge,
-  Analyzer Transmitter,
-  Transducer,
-  One to Many,
-  Multi-Lines,
-  Butt Weld,
-  Top to Top,
-  Sonic Signal,
-  Nuclear,
-  Hydraulic Signal Line,
-  Mechanical Link,
-  Soldered/Solvent,
-  Double Containment,
-  Flange,
-  Flange 2,
-  End Cap,
-  End Cap 2,
-  Breather,
-  Electronically Insulated,
-  Reducer,
-  Inline Mixer,
-  Separator,
-  Drain Silencer,
-  Triangle Separator,
-  Triangle Separator 2,
-  Tundish,
-  Open Vent,
-  Pulsation Dampener,
-  Duplex Strainer,
-  Basket Strainer,
-  Vent Silencer,
-  Inline Silencer,
-  Steam Trap,
-  Desuperheater,
-  Ejector/Eductor,
-  Exhaust Head,
-  Rotary Valve,
-  Expansion Joint,
-  Ejector/Injector,
-  Compressor/Turbine,
-  Motor Driven Turbine,
-  Triple Fan Blades,
-  Fan Blades,
-  Centrifugal Pump,
-  Gear Pump,
-  Horizontal Pump,
-  Progressive Cavity Pump,
-  Screw Pump,
-  Sump Pump,
-  Vacuum Pump,
-  Vertical Pump,
-  Globe Valve,
-  Back Pressure,
-  Needle Valve,
-  Butterfly Valve,
-  Ball Valve,
-  Diaphragm,
-  Plug Valve,
-  Check Valve,
-  Check Valve 2,
-  Angle Valve,
-  Hydraulic Valve,
-  Motor-Operated Valve,
-  Float-Operated Valve,
-  3-Way Plug Valve,
-  4-Way Valve,
-  Gauge,
-  Bleeder Valve,
-  Orifice,
-  Rotameter,
-  Vessel,
-  Open Tank,
-  Open Top Tank,
-  Closed Tank,
-  Storage Sphere,
-  Column,
-  Tank 2,
-  Tray Column,
-  Gas Holder,
-  Clarifier,
-  Gas Cylinder,
-  Bag,
-  Reaction Vessel,
-  Bin,
-  Dome Roof Tank,
-  Cone Roof Tank,
-  Internal Floating Roof,
-  Double Wall Tank,
-  Onion Tank,
-  Indicator 5,
-  Removable Spool,
-  Y Type Strainer,
-  Siphon Drain,
-  Diverter Valve,
-  Detonation Arrester,
-  Bursting Disc,
-  Flame Arrester,
-  Flame Arrester 2,
-  Loadcell,
-  Docking Station,
-  Metal Check,
-  Changeover Valve,
-  Dust Filter,
-  Rotary Sieve,
-  Air Dryer,
-  Drain,
-  Vacuum Filter,
-  Buffer Belt Conveyor,
-  Belt Conveyor with Metalcheck,
-  Big-Bag Filling Machine,
-  Belt Conveyor,
-  Bag Filling Station,
-  Mill,
-  Heater,
-  Filter,
-  Cooling Screw Conveyor,
-  Dust Extractor,
-  Indicator
+    "Compressor",
+    "Conveyor",
+    "Motor",
+    "Mixer",
+    "Tank",
+    "Centrifugal Pump",
+    "Reactor",
+    "Boiler",
+    "Condenser",
+    "Cooling Tower",
+    "Heat Exchanger",
+    "Indicator",
+    "Fan",
+    "Turbine",
+    "Pump",
+    "Valve",
+    "Gauge",
+    "Orifice",
+    "Rotameter"
 ]
 
 
-# names:
-# 0: Solenoid Valve
-# 1: Control Valve
-# 2: Pneumatic
-# 3: Mid-Arrow
-# 4: Gate Valve
-# 5: Powered Valve
-# 6: Axial Compressor
-# 7: Centrifugal Compressor
-# 8: Reciprocation Compressor
-# 9: Rotary Compressor
-# 10: Positive Displacement
-# 11: Overhead Conveyor
-# 12: Scraper Conveyor
-# 13: Screw Conveyor
-# 14: Conveyor
-# 15: Elevator
-# 16: Hoist
-# 17: Skip Hoist
-# 18: Motor
-# 19: Diesel Motor
-# 20: Electric Motor
-# 21: Liquid Ring Vacuum
-# 22: Turbine Driver
-# 23: Double Flow Turbine
-# 24: Agitator / Mixer
-# 25: Drum
-# 26: Tank
-# 27: Centrifugal Blower
-# 28: Alkilation
-# 29: Boom Loader
-# 30: Fluid Catalytic Cracking
-# 31: Fluid Cooking
-# 32: Fluidized Reactor
-# 33: Tubular
-# 34: Reformer
-# 35: Mixing Reactor
-# 36: Hydrodesulfurization
-# 37: Plate tower
-# 38: Hydro Cracking
-# 39: Packed Tower
-# 40: Chimney Tower
-# 41: Furnace
-# 42: Counterflow Forced Draft
-# 43: Counterflow Natural Draft
-# 44: CrossFlow Inducted
-# 45: Oil Burner
-# 46: Automatic Stoker
-# 47: Boiler
-# 48: Reboiler
-# 49: Condenser
-# 50: Evaporative Condenser
-# 51: Cooling Tower
-# 52: Heat Exchanger
-# 53: Air Cooled Exchanger
-# 54: Hairpin Exchanger
-# 55: Plate and Frame Heat Exchanger
-# 56: Spiral Heat Exchanger
-# 57: U-Tube Heat Exchanger
-# 58: Double Pipe Heat
-# 59: Shell and Tube Heat
-# 60: Single Pass Heat
-# 61: Heater
-# 62: Indicator 1
-# 63: Indicator 2
-# 64: Indicator 3
-# 65: Indicator 4 
-# 66: Indicator 
-# 67: Shared Indicator
-# 68: Shared Indicator 2
-# 69: Computer Indicator
-# 70: Programmable Indicator
-# 71: Temp Indicator
-# 72: Temp Transmitter
-# 73: Temp Recorder
-# 74: Temp Controller
-# 75: Flow Indicator
-# 76: Flow Transmitter
-# 77: Flow Recorder
-# 78: Flow Controller
-# 79: Level Indicator
-# 80: Level Transmitter
-# 81: Level Recorder
-# 82: Level Controller
-# 83: Pressure Transmitter
-# 84: Pressure Recorder
-# 85: Pressure Controller
-# 86: Pressure Indicating
-# 87: Pressure Recording
-# 88: Level Alarm
-# 89: Flow Element
-# 90: Temperature Element
-# 91: Level Gauge
-# 92: Analyzer Transmitter
-# 93: Transducer
-# 94: One to Many
-# 95: Multi-Lines
-# 96: Butt Weld
-# 97: Top to Top
-# 98: Sonic Signal
-# 99: Nuclear
-# 100: Hydraulic Signal Line
-# 101: Mechanical Link
-# 102: Soldered/Solvent
-# 103: Double Containment
-# 104: Flange
-# 105: Flange 2
-# 106: End Cap
-# 107: End Cap 2
-# 108: Breather
-# 109: Electronically Insulated
-# 110: Reducer
-# 111: Incline Mixer
-# 112: Seperator
-# 113: Drain Silencer
-# 114: Triangle Seperator
-# 115: Triangle Seperator 2
-# 116: Tundish
-# 117: Open Vent
-# 118: Pulsation Dampener
-# 119: Duplex Strainer
-# 120: Basket Strainer
-# 121: Vent Silencer
-# 122: Inline Silencer
-# 123: Steam Trap
-# 124: Desuperheater
-# 125: Ejector/Eductor
-# 126: Exhaust Head
-# 127: Rotary Valve
-# 128: Expansion Joint
-# 129: Ejector/Injector
-# 130: Compressor/Turbine
-# 131: Motor Driven Turbine
-# 132: Triple Fan Blades
-# 133: Fan Blades
-# 134: Centrifugal Pump
-# 135: Gear Pump
-# 136: Horizontal Pump
-# 137: Progressive Cavity Pump
-# 138: crew Pump
-# 139: Sump Pump
-# 140: Vacuum Pump
-# 141: Vertical Pump
-# 142: Globe Valve
-# 143: Back Pressure
-# 144: Needle Valve
-# 145: Butterfly Valve
-# 146: Ball Valve
-# 147: Diaghragm
-# 148: Plug Valve
-# 149: Check Valve
-# 150: Check Valve 2
-# 151: Angle Valve
-# 152: Hydraulic Valve
-# 153: Motor-Operated Valve
-# 154: Float-Operated Valve
-# 155: 3-Way Plug Valve
-# 156: 4-Way Valve
-# 157: Gauge
-# 158: Bleeder Valve
-# 159: Orifice
-# 160: Rotameter
-# 161: Vessel
-# 162: Open Tank
-# 163: Open Top Tank
-# 164: Closed Tank
-# 165: Storage Sphere
-# 166: Column
-# 167: Tank 2
-# 168: Tray Column
-# 169: Gas Holder
-# 170: Clarifier
-# 171: Gas Cylinder
-# 172: Bag
-# 173: Reaction Vessel
-# 174: Bin
-# 175: Dome Roof Tank
-# 176: Cone Roof Tank
-# 177: Internal Floating Roof
-# 178: Double Wall Tank
-# 179: Onion Tank
+# These were abanoned in favor of the above, but are kept here for reference/future work
+
+# names: ["solenoid valve",
+#     "control valve",
+#     "pneumatic",
+#     "mid-arrow",
+#     "gate valve",
+#     "powered valve",
+#     "axial compressor",
+#     "centrifugal compressor",
+#     "reciprocation compressor",
+#     "rotary compressor",
+#     "positive displacement",
+#     "overhead conveyor",
+#     "scraper conveyor",
+#     "screw conveyor",
+#     "conveyor",
+#     "elevator",
+#     "hoist",
+#     "skip hoist",
+#     "motor",
+#     "diesel motor",
+#     "electric motor",
+#     "liquid ring vacuum",
+#     "turbine driver",
+#     "double flow turbine",
+#     "agitator / mixer",
+#     "drum",
+#     "tank",
+#     "centrifugal blower",
+#     "alkylation",
+#     "boom loader",
+#     "fluid catalytic cracking",
+#     "fluid cooking",
+#     "fluidized reactor",
+#     "tubular",
+#     "reformer",
+#     "mixing reactor",
+#     "hydrodesulfurization",
+#     "plate tower",
+#     "hydro cracking",
+#     "packed tower",
+#     "chimney tower",
+#     "furnace",
+#     "counterflow forced draft",
+#     "counterflow natural draft",
+#     "crossflow inducted",
+#     "oil burner",
+#     "automatic stoker",
+#     "boiler",
+#     "reboiler",
+#     "condenser",
+#     "evaporative condenser",
+#     "cooling tower",
+#     "heat exchanger",
+#     "air cooled exchanger",
+#     "hairpin exchanger",
+#     "plate and frame heat exchanger",
+#     "spiral heat exchanger",
+#     "u-tube heat exchanger",
+#     "double pipe heat",
+#     "shell and tube heat",
+#     "single pass heat",
+#     "heater",
+#     "indicator 1",
+#     "indicator 2",
+#     "indicator 3",
+#     "indicator 4",
+#     "indicator",
+#     "shared indicator",
+#     "shared indicator 2",
+#     "computer indicator",
+#     "programmable indicator",
+#     "temp indicator",
+#     "temp transmitter",
+#     "temp recorder",
+#     "temp controller",
+#     "flow indicator",
+#     "flow transmitter",
+#     "flow recorder",
+#     "flow controller",
+#     "level indicator",
+#     "level transmitter",
+#     "level recorder",
+#     "level controller",
+#     "pressure transmitter",
+#     "pressure recorder",
+#     "pressure controller",
+#     "pressure indicator",
+#     "pressure recording",
+#     "level alarm",
+#     "flow element",
+#     "temperature element",
+#     "level gauge",
+#     "analyzer transmitter",
+#     "transducer",
+#     "one to many",
+#     "multi-lines",
+#     "butt weld",
+#     "top to top",
+#     "sonic signal",
+#     "nuclear",
+#     "hydraulic signal line",
+#     "mechanical link",
+#     "soldered/solvent",
+#     "double containment",
+#     "flange",
+#     "flange 2",
+#     "end cap",
+#     "end cap 2",
+#     "breather",
+#     "electronically insulated",
+#     "reducer",
+#     "inline mixer",
+#     "separator",
+#     "drain silencer",
+#     "triangle separator",
+#     "triangle separator 2",
+#     "tundish",
+#     "open vent",
+#     "pulsation dampener",
+#     "duplex strainer",
+#     "basket strainer",
+#     "vent silencer",
+#     "inline silencer",
+#     "steam trap",
+#     "desuperheater",
+#     "ejector/eductor",
+#     "exhaust head",
+#     "rotary valve",
+#     "expansion joint",
+#     "ejector/injector",
+#     "compressor/turbine",
+#     "motor driven turbine",
+#     "triple fan blades",
+#     "fan blades",
+#     "centrifugal pump",
+#     "gear pump",
+#     "horizontal pump",
+#     "progressive cavity pump",
+#     "screw pump",
+#     "sump pump",
+#     "vacuum pump",
+#     "vertical pump",
+#     "globe valve",
+#     "back pressure",
+#     "needle valve",
+#     "butterfly valve",
+#     "ball valve",
+#     "diaphragm",
+#     "plug valve",
+#     "check valve",
+#     "check valve 2",
+#     "angle valve",
+#     "hydraulic valve",
+#     "motor-operated valve",
+#     "float-operated valve",
+#     "3-way plug valve",
+#     "4-way valve",
+#     "gauge",
+#     "bleeder valve",
+#     "orifice",
+#     "rotameter",
+#     "vessel",
+#     "open tank",
+#     "open top tank",
+#     "closed tank",
+#     "storage sphere",
+#     "column",
+#     "tank 2",
+#     "tray column",
+#     "gas holder",
+#     "clarifier",
+#     "gas cylinder",
+#     "bag",
+#     "reaction vessel",
+#     "bin",
+#     "dome roof tank",
+#     "cone roof tank",
+#     "internal floating roof",
+#     "double wall tank",
+#     "onion tank",
+#     "indicator 5",
+#     "removable spool",
+#     "y type strainer",
+#     "siphon drain",
+#     "diverter valve",
+#     "detonation arrester",
+#     "bursting disc",
+#     "flame arrester",
+#     "flame arrester 2",
+#     "loadcell",
+#     "docking station",
+#     "metal check",
+#     "changeover valve",
+#     "dust filter",
+#     "rotary sieve",
+#     "air dryer",
+#     "drain",
+#     "vacuum filter",
+#     "buffer belt conveyor",
+#     "belt conveyor with metalcheck",
+#     "big-bag filling machine",
+#     "belt conveyor",
+#     "bag filling station",
+#     "mill",
+#     "heater",
+#     "filter",
+#     "cooling screw conveyor",
+#     "dust extractor",
+#     "indicator",
+#     "air filter or strainer",
+#     "air filter",
+#     "air lubricator",
+#     "air vent with flame arrestor",
+#     "bellmouth",
+#     "blower",
+#     "bulkhead penetration",
+#     "cartridge filter quick change",
+#     "chiller",
+#     "circulating pump",
+#     "combustion air duct",
+#     "compressor",
+#     "condensate trap",
+#     "conical strainer",
+#     "connection piece",
+#     "cooler",
+#     "diaphragm valve",
+#     "diapragm pump",
+#     "double bleed and block valve",
+#     "fine filter",
+#     "flap with air filter",
+#     "flexible hose",
+#     "float valve",
+#     "four way valve",
+#     "fuel engine",
+#     "full bore ball valve",
+#     "gaging switch",
+#     "generator",
+#     "grey loc",
+#     "heating unit",
+#     "hose connection",
+#     "hpu",
+#     "level switch",
+#     "line termination",
+#     "manual chock valve",
+#     "manually operated valve",
+#     "min flow control valve",
+#     "pinch valve",
+#     "piping special item",
+#     "plate heat exchanger",
+#     "process shutdown",
+#     "provision plant",
+#     "pump with motor",
+#     "pump",
+#     "quick close valve",
+#     "reducing flange",
+#     "restrictor",
+#     "rupture disc",
+#     "screw down- non-return valve",
+#     "self acting pressure control valve",
+#     "self close cock",
+#     "self contained thermostat valve",
+#     "shutdown valve",
+#     "silencer",
+#     "single nozzle tank cleaning machine",
+#     "sounding pip-self closing cock",
+#     "sounding pipe-screw cap",
+#     "spacer",
+#     "spade",
+#     "spectacle blind nc",
+#     "spectacle blind no",
+#     "sprint loaded valve",
+#     "strainer t-type",
+#     "strainer y-type",
+#     "strainer",
+#     "submerged tank cleaning machine",
+#     "switchboard",
+#     "swivel joint",
+#     "temperature indicator",
+#     "temperature transmitter",
+#     "temporary strainer",
+#     "three way valve with motor",
+#     "three way valve",
+#     "tie-in point",
+#     "tower",
+#     "transfer pump",
+#     "trap",
+#     "turbine",
+#     "vacuum breaker",
+#     "ventilation fan",
+#     "ventilation unit"
+# ]
