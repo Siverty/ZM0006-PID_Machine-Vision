@@ -9,8 +9,8 @@ import os
 # Set train and label folder paths
 train_folder = './datasets/Labels_PID/images/train'
 label_folder = './datasets/Labels_PID/labels/train'
-input_folder = 'test\Converted_PID_JPEG'
-output_folder = 'test\Original_PID'
+input_folder = 'test\P&ID_input'
+output_folder = 'test\Original_PID_PNG'
 
 # Loop through images in train folder
 for filename in os.listdir(train_folder):
