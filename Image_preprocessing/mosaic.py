@@ -48,4 +48,6 @@ def mosaic_images(train_folder, label_folder):
             label_content = f.read()
         with open(os.path.join(label_folder, "mosaic_" + label_filename), 'w') as f:
             f.write(label_content)
+
+    print("process complete.")
     exit()
