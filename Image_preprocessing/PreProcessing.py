@@ -14,6 +14,9 @@ copy_folder = "test\Original_PID_PDF"
 
 # Loop through images in train folder
 for filename in os.listdir(train_folder):
+    # Convert pdf to png
+    img = pdf_to_png_converter(check_for_pdf_in_folder, copy_folder)
+
     # Apply blur
     img = blur_images(train_folder, label_folder)
 
@@ -25,6 +28,3 @@ for filename in os.listdir(train_folder):
 
     # Apply mosaic
     img = mosaic_images(train_folder, label_folder)
-
-    # Convert pdf to png
-    img = pdf_to_png_converter(check_for_pdf_in_folder, copy_folder)
