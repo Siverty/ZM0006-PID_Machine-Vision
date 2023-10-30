@@ -26,7 +26,7 @@ def blur_images(train_folder, label_folder):
         # Load the image
         img = cv2.imread(os.path.join(train_folder, filename))
 
-        # Define the kernel for erosion
+        # Define the kernel for blurring
         kernel = (9, 9)  # 9x9 kernel for blurring
 
         # Blur the image

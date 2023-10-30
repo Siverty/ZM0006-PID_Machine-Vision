@@ -27,7 +27,7 @@ def pdf_to_png_converter(input_folder, output_folder):
                 image = Image.frombytes("RGB", [pixmap.width, pixmap.height], pixmap.samples)
 
                 # Set the quality factor (0-100). A higher value results in better quality and larger file size.
-                quality = 95  # You can adjust this as needed
+                quality = 95  # this value is chosen because it is the compromise between runtime and file size
 
                 # Save the image with the specified quality
                 png_file = os.path.splitext(filename)[0] + f'_page{page_num + 1}.png'
@@ -37,7 +37,7 @@ def pdf_to_png_converter(input_folder, output_folder):
             # Close the PDF file
             pdf_document.close()
 
-    # Move every .png file to the output folder
+    # Move every .png file to the output folder, in the case of wrong user input
     for filename in os.listdir(input_folder):
         if filename.endswith('.png'):
             png_file = os.path.join(input_folder, filename)

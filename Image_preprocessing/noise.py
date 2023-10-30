@@ -27,10 +27,10 @@ def add_noise(train_folder, label_folder):
         # Load the image
         img = cv2.imread(os.path.join(train_folder, filename))
 
-        # Define the kernel for erosion
-        kernel = (9, 9) # 9x9 kernel for blurring
+        # Define the kernel for the noise filter
+        kernel = (9, 9) # 9x9 kernel for the noise filter
 
-        # Add Gaussian noise to the image
+        # Add Gaussian noise to the image within a normal distribution
         mean = 0
         var = 2000
         sigma = var ** 0.5
