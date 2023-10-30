@@ -9,7 +9,7 @@ import os
 # Set train and label folder paths
 train_folder = './datasets/Labels_PID/images/train'
 label_folder = './datasets/Labels_PID/labels/train'
-input_folder = 'test\P&ID_input'
+input_folder = 'test\P&ID_input(place_pdf_here)'
 output_folder = 'test\Original_PID_PNG'
 
 # Loop through images in train folder
