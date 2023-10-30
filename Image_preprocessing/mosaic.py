@@ -50,4 +50,5 @@ def mosaic_images(train_folder, label_folder):
             f.write(label_content)
 
     print("process complete.")
+    # The pipeline is finished, exit the program
     exit()
