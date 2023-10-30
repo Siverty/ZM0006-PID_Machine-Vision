@@ -1,9 +1,10 @@
 # Import necessary modules
-from blur import blur_images
+from blur import blur_images 
 from erode import erode_images
 from noise import add_noise
 from mosaic import mosaic_images
 from pdf_to_png_converter import pdf_to_png_converter
+from to_png_converter import any_to_png_converter
 import os
 
 # Set train and label folder paths
@@ -16,6 +17,9 @@ output_folder = 'test\Original_PID_PNG'
 for filename in os.listdir(train_folder):
     # Convert pdf to png
     pdf_to_png_converter(input_folder, output_folder)
+
+    # Convert any image to png
+    img = any_to_png_converter(train_folder)
 
     # Apply blur
     img = blur_images(train_folder, label_folder)
