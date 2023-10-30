@@ -1,6 +1,7 @@
 import os
 import fitz  # PyMuPDF
 from PIL import Image
+import shutil
 
 def pdf_to_png_converter(input_folder, output_folder):
     # Create the output folder if it doesn't exist
@@ -35,5 +36,12 @@ def pdf_to_png_converter(input_folder, output_folder):
 
             # Close the PDF file
             pdf_document.close()
+
+    # Move every .png file to the output folder
+    for filename in os.listdir(input_folder):
+        if filename.endswith('.png'):
+            png_file = os.path.join(input_folder, filename)
+            shutil.move(png_file, output_folder)
+            print(f'{png_file} moved to {output_folder}')
 
     print("PDF conversion complete.")
