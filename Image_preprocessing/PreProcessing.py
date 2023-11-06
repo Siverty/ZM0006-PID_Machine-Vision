@@ -5,6 +5,7 @@ from noise import add_noise
 from mosaic import mosaic_images
 from pdf_to_png_converter import pdf_to_png_converter
 from to_png_converter import any_to_png_converter
+from negative import negative_images
 import os
 
 # Set train and label folder paths
@@ -30,6 +31,9 @@ for filename in os.listdir(train_folder):
 
     # Add noise
     img = add_noise(train_folder, label_folder)
+
+    # Apply negative filter and force grayscale
+    img = negative_images(train_folder, label_folder)
 
     # Apply mosaic
     img = mosaic_images(train_folder, label_folder)

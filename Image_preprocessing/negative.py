@@ -1,0 +1,45 @@
+import cv2
+import os
+
+def negative_images(train_folder, label_folder):
+    # Loop through each image in the folder
+    for filename in os.listdir(train_folder):
+        # Check if the file name starts with "negative_"
+        if filename.startswith("negative_"):
+            os.remove(os.path.join(train_folder, filename))
+            os.remove(os.path.join(label_folder, os.path.splitext(filename)[0] + ".txt"))
+            print(f"{filename} deleted...")
+            continue
+
+        elif filename.startswith("blur_"):
+            print(f"{filename} already blurred, skipping...")
+            continue
+
+        elif filename.startswith("noisy_"):
+            print(f"{filename} already noisy, skipping...")
+            continue
+
+        elif filename.startswith("mosaic_"):
+            print(f"{filename} already mosaiced, skipping...")
+            continue
+
+        elif filename.startswith("eroded_"):
+            print(f"{filename} already eroded, skipping...")
+            continue
+
+        # Load the image in grayscale
+        img = cv2.imread(os.path.join(train_folder, filename), cv2.IMREAD_GRAYSCALE)
+
+        # Apply a negative filter
+        negative = cv2.bitwise_not(img)
+
+        # Save the negative image
+        cv2.imwrite(os.path.join(train_folder, "negative_" + filename), negative)
+
+        # Copy the label file and prepend the filename with "negative_"
+        label_filename = os.path.splitext(filename)[0] + ".txt"
+        with open(os.path.join(label_folder, label_filename), 'r') as f:
+            label_content = f.read()
+        with open(os.path.join(label_folder, "negative_" + label_filename), 'w') as f:
+            f.write(label_content)
+

@@ -24,6 +24,10 @@ def add_noise(train_folder, label_folder):
             print(f"{filename} already mosaiced, skipping...")
             continue
 
+        elif filename.startswith("negative_"):
+            print(f"{filename} already negative, skipping...")
+            continue
+
         # Load the image
         img = cv2.imread(os.path.join(train_folder, filename))
 
